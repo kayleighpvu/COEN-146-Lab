@@ -1,0 +1,22 @@
+Steps to use gdb debugger when running C code:
+
+1) Compile code using -g option.
+	Example: gcc -g my_program.c
+
+2) Launch the gdb compiler on the executable created from the first step
+	Example: gdb ./my_exe
+
+3) Set up break point in code as follows:
+	break line_number
+
+4) Run your program as follows:
+	run [command_line_arguments_if_any]
+
+5) Print value of variables as follows:
+	print variable_name
+
+6) Execute the next line in your code using one of the following methods:
+	i) c or continue: Debugger will continue executing until the next break point.
+	ii) n or next: Debugger will execute the next line as single instruction.
+	iii) s or step: Same as next, but does not treats function as a single instruction, instead goes into the
+           function and executes it line by line.
